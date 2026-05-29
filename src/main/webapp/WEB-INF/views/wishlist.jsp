@@ -83,7 +83,8 @@
             <a href="<%= request.getContextPath() %>/product?id=<%= p.getProductId() %>" class="img-link">
                 <img class="product-img" src="<%= (p.getImageUrl() != null && !p.getImageUrl().trim().isEmpty())
                         ? request.getContextPath() + "/" + p.getImageUrl()
-                        : "https:
+                        : request.getContextPath() + "/assets/images/default.png" %>"
+                     alt="<%= p.getName() %>">
             </a>
 
             <div class="card-body">
